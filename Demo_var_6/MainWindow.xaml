@@ -1,0 +1,23 @@
+﻿<Window x:Class="Demo_var_6.MainWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="400" Width="400"
+        WindowStartupLocation="CenterScreen"
+        xmlns:esc="clr-namespace:EasyCaptcha.Wpf;assembly=EasyCaptcha.Wpf"
+        WindowState="Normal">
+    <Grid Background="#2B2B2B">
+        <materialDesign:Card Margin="20,0,20,0" Background="Transparent" VerticalAlignment="Center" Height="364" UniformCornerRadius="10">
+            <Grid Margin="0,10,0,0">
+                <StackPanel Margin="20,0,20,20">
+                    <TextBox x:Name="UsernameTextBox" materialDesign:HintAssist.Hint="Username" FontSize="20" Margin="0 10"/>
+                    <PasswordBox x:Name="PasswordBox" materialDesign:HintAssist.Hint="Password" FontSize="20" Margin="0 10"/>
+                    <esc:Captcha x:Name="Captcha" Width="202" Height="58" Margin="0 10" />
+                    <TextBox x:Name="CaptchaTextBox" Width="150" materialDesign:HintAssist.Hint="Captcha Code" FontSize="20" Margin="0 10"/>
+                    <Button Content="Log In" Click="Button_Click" FontSize="20" Width="150" Margin="0 10" Height="35"/>
+                </StackPanel>
+                <CheckBox Content="I am not a robot" HorizontalAlignment="Center" FontSize="20" Margin="0,305,0,20"/>
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</Window>
